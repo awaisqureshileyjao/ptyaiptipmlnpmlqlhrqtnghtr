@@ -1,0 +1,597 @@
+<?xml version="1.0"?>
+<addon scheme="2.0">
+    <id>csc_one_page_checkout</id>
+    <version>2.8</version>
+    <priority>100000</priority>
+    <position>120</position>
+    <status>active</status>
+    <default_language>en</default_language>
+    <auto_install>MULTIVENDOR,ULTIMATE</auto_install>
+	<name>[cs-commerce.com] - One page checkout</name>
+	<description>cs-commerce.com - One page checkout with Dadata and Google autocomplete. Developer &lt;b&gt;&lt;a href="http://www.cs-commerce.com" target="_blank" &gt;www.cs-commerce.com&lt;/a&gt;&lt;/b&gt;</description>
+	<translations>
+		<item for="name" lang="ru">[cs-commerce.com] - Одностраничное оформление заказа</item>
+       	<item for="description" lang="ru">Одностраничное оформление заказа с Dadata и Google autocomplete. Разработчик &lt;b&gt;&lt;a href="http://www.cs-commerce.com" target="_blank" &gt;www.cs-commerce.com&lt;/a&gt;&lt;/b&gt;</item>       
+    </translations>
+	<compatibility>        
+        <conflicts>ab__checkout_without_email,ab__mask_of_phone_number,lite_checkout,ecl_dadata</conflicts>
+    </compatibility>
+	<settings edition_type="ROOT,ULT:VENDOR">
+		<sections>
+		<section id="general">
+			<name>General</name>
+			<translations>                           
+				<item lang="ru">Общие</item>
+			</translations>							
+			<items>
+				<!--Main settings-->
+				<item id="gmain_settings_header">
+					<type>header</type>
+					<name>Main settings</name>  
+					<translations>                           
+						<item lang="ru">Основные параметры</item>					
+					</translations>	
+					<handler/>
+					<variants/>
+				</item>
+				<item id="disable">
+					<type>checkbox</type>					
+					<default_value>N</default_value>
+					<name>Disable one page checkout for current storefront</name>
+					<translations>                           
+						<item lang="ru">Отключить одностраничное оформление заказа для текущей витрины</item>                          
+					</translations>	    				
+				</item>
+				 <item id="location">
+					<type>checkbox</type>					
+					<default_value>N</default_value>
+					<name>Use location &quot;All countries&quot; as a base</name>
+					<translations>                           
+						<item lang="ru">Использовать локацию &quot;Все страны&quot; как базовую</item>                          
+					</translations>	    				
+				</item>
+				<item id="location_fields">
+					<name>Select necessary fields for determine the location of the customer</name>            		
+					<type>multiple select</type>					
+					<translations>                           
+						<item lang="ru">Выберите поля, необходимые для определения локации покупателя</item>					
+					</translations>			
+				</item>
+				<item id="divide_location_fields">
+					<type>checkbox</type>
+					<default_value>Y</default_value>
+					<name>Divide location fields and show them on block before shipping methods</name>
+					<translations>                           
+						<item lang="ru">Отображать поля локации в отдельном блоке над способами доставки</item>                          
+					</translations>	    				
+				</item>
+				<item id="phone_mask_template">
+					<name>Phone mask</name> 
+					<translations>                           
+						<item lang="ru">Маска ввода номера телефона</item>
+					</translations>	             
+					<type>input</type>
+					<default_value>(999) 999-99-99</default_value>			
+				</item>
+				<item id="hide_email_if_logged">
+					<name>Hide email field if user is logged</name> 
+					<translations>                           
+						<item lang="ru">Скрыть поле email если покупатель авторизован</item>
+					</translations>	             
+					<type>checkbox</type>
+					<default_value>Y</default_value>			
+				</item>
+				<item id="email_not_required">
+					<name>Allow guest users place order without email</name> 
+					<translations>                           
+						<item lang="ru">Разрешить гостевым покупателям оформить заказ без email</item>
+					</translations>	             
+					<type>checkbox</type>
+					<default_value>Y</default_value>			
+				</item>
+				
+				<item id="hide_auth">
+					<name>Hide authorization block</name> 
+					<translations>                           
+						<item lang="ru">Скрыть блок авторизации</item>
+					</translations>	             
+					<type>checkbox</type>
+					<default_value>N</default_value>			
+				</item>
+				<item id="hide_shippings">
+					<name>Hide shippings block</name> 
+					<translations>                           
+						<item lang="ru">Скрыть блок способов доставки</item>
+					</translations>	             
+					<type>checkbox</type>
+					<default_value>N</default_value>			
+				</item>
+				<item id="hide_payments">
+					<name>Hide payments block</name> 
+					<translations>                           
+						<item lang="ru">Скрыть блок способов оплаты</item>
+					</translations>	             
+					<type>checkbox</type>
+					<default_value>N</default_value>			
+				</item>
+				<item id="hide_terms">
+					<name>Hide terms and conditions block</name> 
+					<translations>                           
+						<item lang="ru">Скрыть блок согласия с условиями</item>
+					</translations>	             
+					<type>checkbox</type>
+					<default_value>N</default_value>			
+				</item>
+				<!--General styles-->
+				<item id="general_styles_header">
+					<type>header</type>
+					<name>General styles</name>  
+					<translations>                           
+						<item lang="ru">Общие стили</item>					
+					</translations>	
+					<handler/>
+					<variants/>
+				</item>
+				<item id="shipping_and_address_in_one_row">
+					<name>Display blocks Shipping methods and Shipping address in 2 columns</name>            
+					<type>checkbox</type>
+					<default_value>Y</default_value>					
+					<translations>                           
+						<item lang="ru">Отображать блоки способы доставки и адрес доставки в две колонки</item>
+					</translations>			
+				</item>
+				
+				<item id="clr_title_border_buttom">
+					<name>Blocks' titles bottom border color</name>  
+					<translations>                           
+						<item lang="ru">Цвет нижней границы заголовков блоков</item>
+					</translations>	              
+					<type>input</type>
+					<default_value>#f3f3f3</default_value>			
+				</item>
+				<item id="title_font_size">
+					<name>Blocks' titles font size</name> 
+					<translations>                           
+						<item lang="ru">Размер шрифта заголовков блоков</item>
+					</translations>	             
+					<type>input</type>
+					<default_value>14px</default_value>			
+				</item>
+				<item id="clr_title_font_color">
+					<name>Blocks' titles font color</name>   
+					<translations>                           
+						<item lang="ru">Цвет текста заголовков блоков</item>
+					</translations>	           
+					<type>input</type>
+					<default_value>#000000</default_value>			
+				</item>
+				<item id="title_font_size_weight">
+					<name>Blocks' titles font weight</name>  
+					<translations>                           
+						<item lang="ru">Начертание шрифта заголовков блоков</item>
+					</translations>	            
+					<type>selectbox</type>
+					<default_value>bold</default_value>			
+				</item>
+				<item id="clr_fields_labels">
+					<name>Fields label color</name>  
+				<translations>                           
+						<item lang="ru">Цвет текста подсказки внутри полей ввода</item>
+					</translations>		            
+					<type>input</type>
+					<default_value>#5A9EEF</default_value>			
+				</item>
+				<item id="clr_fields_focus">
+					<name>Fields' border-bottom color on focus</name>    
+					<translations>                           
+						<item lang="ru">Цвет нижней границы активного поля ввода</item>
+					</translations>	          
+					<type>input</type>
+					<default_value>#009688</default_value>			
+				</item>
+				
+			</items>
+		</section>
+		<section id="autosuggestions">
+			<name>Address Autosuggestions</name>
+			<translations>                           
+				<item lang="ru">Автоподстановка адреса</item>
+			</translations>							
+			<items>
+				<item id="autosuggestions_header">
+					<type>header</type>
+					<name>Autosuggestion service</name>
+					 <translations>                           
+						<item lang="ru">Сервис автозаполнения адреса</item>
+					</translations> 
+					<handler/>
+					<variants/>
+				</item>
+				<item id="provider">
+					<name>Provider</name>            
+					<type>selectbox</type>
+					<default_value>none</default_value>					
+					<translations>                           
+						<item lang="ru">Провайдер</item>
+					</translations>			
+				</item>
+				<item id="api_key">
+					<name>API key</name>            
+					<type>input</type>
+					<default_value></default_value>					
+					<translations>                           
+						<item lang="ru">API ключ</item>
+					</translations>			
+				</item>
+				<item id="geolocation_header">
+					<type>header</type>
+					<name>Geolocation service by Google</name>
+					 <translations>                           
+						<item lang="ru">Сервис геолокации от Google</item>
+					</translations> 
+					<handler/>
+					<variants/>
+				</item>
+				<item id="google_geolocation_api_key">
+					<name>Google geolocation Api key</name>					
+					<translations>                           
+						<item lang="ru">Ключ API сервиса геолокации Google</item>
+					</translations>	             
+					<type>input</type>								
+				</item>				
+				<item id="show_geoautofill">
+					<name>Show "Fill my address fields" button</name>					
+					<translations>                           
+						<item lang="ru">Показать кнопку "Заполнить мой адрес"</item>
+					</translations>	             
+					<type>checkbox</type>
+					<default_value>Y</default_value>			
+				</item>	
+				<item id="show_openmap">
+					<name>Show "Find me on Google maps" button</name>					
+					<translations>                           
+						<item lang="ru">Показать кнопку "Найти мой адрес на карте Google"</item>
+					</translations>	             
+					<type>checkbox</type>
+					<default_value>N</default_value>			
+				</item>				
+			</items>
+		</section>
+		<section id="shippings_styles">
+			<name>Shipping methods Styles</name>
+			<translations>                           
+				<item lang="ru">Стили блока Способы доставки товара</item>
+			</translations>				
+			<items>				
+				<item id="shipping_methods_view">
+					<name>Shippings methods view</name>            
+					<type>selectbox</type>
+					<default_value>simple_list</default_value>					
+					<translations>                           
+						<item lang="ru">Отображение способов доставки</item>
+					</translations>			
+				</item>
+				<item id="shippings_header">
+					<type>header</type>
+					<name>Shippings methods styles</name>
+					 <translations>                           
+						<item lang="ru">Стили Способов доставки товара</item>
+					</translations> 
+					<handler/>
+					<variants/>
+				</item>
+				<item id="clr_shipping_bg_default">
+					<name>Background-color / color of radio button</name>  
+					<translations>                           
+						<item lang="ru">Цвет фона / радиокнопки</item>
+					</translations>            
+					<type>input</type>
+					<default_value>#f3f3f3</default_value>			
+				</item>	
+				<item id="clr_shipping_border_default">
+					<name>Border сolor</name>  
+					<translations>                           
+						<item lang="ru">Цвет рамки</item>
+					</translations>            
+					<type>input</type>
+					<default_value>#d9d9d9</default_value>			
+				</item>
+				<item id="clr_shipping_text_default">
+					<name>Text color</name> 
+					<translations>                           
+						<item lang="ru">Цвет текста</item>
+					</translations>             
+					<type>input</type>
+					<default_value>#000</default_value>			
+				</item>
+				<item id="font_size_shipping_default">
+					<name>Ffont size</name> 
+					<translations>                           
+						<item lang="ru">Размер шрифта</item>
+					</translations>             
+					<type>input</type>
+					<default_value>14px</default_value>			
+				</item>
+				<item id="clr_shipping_price_default">
+					<name>Shipping method price text color</name>  
+					<translations>                           
+						<item lang="ru">Цвет текста стоимости доставки</item>
+					</translations>             
+					<type>input</type>
+					<default_value>#dfdfdf</default_value>			
+				</item>
+				
+				
+				<item id="selected_shippings_header">
+					<type>header</type>
+					<name>Selected Shipping method styles</name>  
+					<translations>                           
+				<item lang="ru">Стили выбранного способа доставки товара</item>
+			</translations>  
+					<handler/>
+					<variants/>
+				</item>	
+						
+				<item id="clr_shipping_bg_active">
+					<name>Background-color / color of radio button</name>  
+					   <translations>                           
+							<item lang="ru">Цвет фона / радиокнопки</item>
+						</translations>         
+					<type>input</type>
+					<default_value>#e3f4cb</default_value>			
+				</item>	
+				<item id="clr_shipping_border_active">
+					<name>Border color</name> 
+					<translations>                           
+						<item lang="ru">Цвет рамки</item>
+					</translations>             
+					<type>input</type>
+					<default_value>#9ec769</default_value>			
+				</item>
+				<item id="clr_shipping_text_active">
+					<name>Text color</name>   
+					<translations>                           
+						<item lang="ru">Цвет текста</item>
+					</translations>           
+					<type>input</type>
+					<default_value>#000000</default_value>			
+				</item>
+				<item id="font_size_shipping_active">
+					<name>Font size</name>   
+					<translations>                           
+						<item lang="ru">Размер шрифта</item>
+					</translations>           
+					<type>input</type>
+					<default_value>14px</default_value>			
+				</item>				
+				<item id="clr_shipping_price_active">
+					<name>Selected shipping method price text color</name> 
+					<translations>                           
+						<item lang="ru">Цвет текста стоимости выбранного способа доставки</item>
+					</translations>             
+					<type>input</type>
+					<default_value>#cc0000</default_value>			
+				</item>
+			</items>
+		</section>			
+									
+		<section id="payment_styles">
+			<name>Payment methods styles</name>	
+			<translations>                           
+				<item lang="ru">Стили блока Способы оплаты товара</item>
+			</translations> 	
+			<items>	
+				<item id="payment_methods_view">
+					<name>Payments methods view</name>            
+					<type>selectbox</type>
+					<default_value>simple_list</default_value>					
+					<translations>                           
+						<item lang="ru">Отображение способов оплаты товара</item>
+					</translations>			
+				</item>
+				<item id="payments_header">
+					<type>header</type>
+					<name>Payments methods styles</name>  
+					<translations>                           
+						<item lang="ru">Стили способов оплаты товара</item>
+					</translations> 
+					<handler/>
+					<variants/>
+				</item>
+				<item id="clr_payment_bg_default">
+					<name>Background-color / color of radio button</name>  
+					<translations>                           
+						<item lang="ru">Цвет фона / радиокнопки </item>
+					</translations>             
+					<type>input</type>
+					<default_value>#f3f3f3</default_value>			
+				</item>	
+				<item id="clr_payment_border_default">
+					<name>Border color</name>   
+					   <translations>                           
+						<item lang="ru">Цвет границ</item>
+					</translations>        
+					<type>input</type>
+					<default_value>#d9d9d9</default_value>			
+				</item>
+				<item id="clr_payment_text_default">
+					<name>Text color</name>  
+					 <translations>                           
+					<item lang="ru">Цвет текста </item>
+					</translations>    					            
+					<type>input</type>
+					<default_value>#000000</default_value>			
+				</item>
+				<item id="font_size_payment_default">
+					<name>Font size</name>  
+					<translations>                           
+						<item lang="ru">Размер шрифта </item>
+					</translations>              
+					<type>input</type>
+					<default_value>14px</default_value>			
+				</item>				
+				<item id="selected_payments_header">
+					<type>header</type>
+					<name>Selected payment method styles</name>  
+					<translations>                           
+						<item lang="ru">Стили выбранного способа оплаты товара</item>
+					</translations>  
+					<handler/>
+					<variants/>
+				</item>
+						
+				<item id="clr_payment_bg_active">
+					<name>Background-color / color of radio button </name>  
+					<translations>                           
+						<item lang="ru">Цвет фона / радиокнопки</item>
+					</translations>              
+					<type>input</type>
+					<default_value>#e3f4cb</default_value>			
+				</item>	
+				<item id="clr_payment_border_active">
+					<name>Border Color</name> 
+					<translations>                           
+					<item lang="ru">Цвет рамки 
+					</item>
+					</translations>               
+					<type>input</type>
+					<default_value>#9ec769</default_value>			
+				</item>
+				<item id="clr_payment_text_active">
+					<name>Text color</name>   
+					<translations>                           
+					<item lang="ru">Цвет текста 
+					</item>
+					</translations>           
+					<type>input</type>
+					<default_value>#333333</default_value>			
+				</item>
+				<item id="font_size_payment_active">
+					<name>Font size</name>
+					 <translations>                           
+						<item lang="ru">Размер шрифта</item>
+					</translations>             
+					<type>input</type>
+					<default_value>14px</default_value>			
+				</item>			
+				
+			</items>
+		</section>
+		</sections>
+	</settings>
+    <queries>
+        <item for="install">
+			ALTER TABLE `?:shippings`			
+			ADD `min_subtotal` decimal(13,3) NOT NULL DEFAULT '0',
+			ADD `max_subtotal` decimal(13,3) NOT NULL DEFAULT '0';  
+        </item>
+		<item for="install">
+			ALTER TABLE `?:profile_fields`
+			ADD `cs_field_size` varchar(3) COLLATE 'utf8_general_ci' NOT NULL DEFAULT 'l',
+			ADD `shipping_ids` varchar(255) COLLATE 'utf8_general_ci' NOT NULL DEFAULT '';
+		</item>
+		<item for="install">
+			ALTER TABLE `?:user_profiles`
+			ADD `autosuggestion` varchar(255) COLLATE 'utf8_general_ci' NOT NULL DEFAULT '';
+		</item>	
+		<item for="install">
+			UPDATE `?:profile_fields` SET
+				`checkout_show` = 'N'
+				WHERE `section` = 'C';
+		</item>
+				   
+        <item for="uninstall">
+			ALTER TABLE `?:shippings`			
+			DROP `min_subtotal`,
+			DROP `max_subtotal`;      
+        </item>
+		<item for="uninstall">
+			ALTER TABLE `?:profile_fields`
+			DROP `cs_field_size`,
+			DROP `shipping_ids`;
+		</item>
+		<item for="uninstall">
+			ALTER TABLE `?:user_profiles`
+			DROP `autosuggestion`;
+		</item>
+		
+	</queries>
+	<language_variables>
+        <item lang="en" id="order_subtotal_limit">Cart subtotal limit</item>
+		<item lang="ru" id="order_subtotal_limit">Лимиты на подытог корзины</item>
+		
+		<item lang="en" id="csc.is_pickup">Choose pickup as shipping method</item>
+		<item lang="ru" id="csc.is_pickup">Отметить доставку как самовывоз</item>
+		
+		<item lang="en" id="copc.simple_list_radio">Radio button</item>
+		<item lang="ru" id="copc.simple_list_radio">Радиокнопка</item>
+		
+		<item lang="en" id="copc.simple_list">Simple List</item>
+		<item lang="ru" id="copc.simple_list">Простой список</item>
+		
+		<item lang="en" id="copc.bold">Bold</item>
+		<item lang="ru" id="copc.bold">Полужирное</item>
+		
+		<item lang="en" id="copc.normal">Normal</item>
+		<item lang="ru" id="copc.normal">Нормальное</item>
+		
+		<item lang="en" id="copc.light">Light</item>
+		<item lang="ru" id="copc.light">Тонкое</item>
+		
+		<item lang="en" id="copc.select_shipping_method">Shipping methods</item>
+		<item lang="ru" id="copc.select_shipping_method">Способы доставки товара</item>
+		
+		<item lang="en" id="select_payment_method">Payment methods</item>
+		<item lang="ru" id="select_payment_method">Способы оплаты товара</item> 
+		
+		<item lang="en" id="csc.field_size">Size of input field</item>
+		<item lang="ru" id="csc.field_size">Размер поля ввода</item> 
+		
+		<item lang="en" id="csc.for_delivery">Only for delivery</item>
+		<item lang="ru" id="csc.for_delivery">Выводить в случае необходимости доставки</item>
+		
+		<item lang="en" id="copc.select_location">Select your location</item>
+		<item lang="ru" id="copc.select_location">Укажите Ваше местонахождение</item> 
+		
+		<item lang="en" id="csc.shipping_info">Shipping information</item>
+		<item lang="ru" id="csc.shipping_info">Информация по доставке товара</item>
+		
+		<item lang="en" id="autosuggestion_field">Start to enter your address here</item>
+		<item lang="ru" id="autosuggestion_field">Начните вводить ваш адрес</item>
+		
+		<item lang="en" id="opc.hide_for">Hide field for</item>
+		<item lang="ru" id="opc.hide_for">Скрыть поле для</item>
+		
+		<item lang="en" id="opc.hide_for_tooltip">Hide field for selected shipping methods</item>
+		<item lang="ru" id="opc.hide_for_tooltip">Скрыть поле для выбранных способов доставки</item>
+		
+		<item lang="en" id="opc.find_my_address">Fill my address fields automatically using my geolocation</item>
+		<item lang="ru" id="opc.find_my_address">Заполнить автоматически поля моего адреса используя геолокацию</item>
+		
+		<item lang="en" id="opc.find_me_on_map">Find and fill my address fields using Google map</item>
+		<item lang="ru" id="opc.find_me_on_map">Найти и заполнить мой адрес на карте Google</item>
+		
+		<item lang="en" id="opc.apply_location">Apply selected location</item>
+		<item lang="ru" id="opc.apply_location">Применить выбранную локацию</item>
+		
+		<item lang="en" id="opc.map_title">Select your location</item>
+		<item lang="ru" id="opc.map_title">Выберите вашу локацию</item>
+		
+		<item lang="en" id="products_in_cart_with_icons">Products in cart with icons</item>
+		<item lang="ru" id="products_in_cart_with_icons">Товары в корзине с иконками</item>
+		
+		<item lang="en" id="opc.you_not_logged">You not logged in to our website. Click </item>
+		<item lang="ru" id="opc.you_not_logged">Вы не авторизованы на сайте. Кликните </item>
+		
+		<item lang="en" id="opc.to_continue_as_logged"> to open login form or continue as guest.</item>
+		<item lang="ru" id="opc.to_continue_as_logged"> для входа на сайт или продолжите оформление заказа как гость.</item>
+		
+		<item lang="en" id="opc.you_allready_logged_as">You logged in as </item>
+		<item lang="ru" id="opc.you_allready_logged_as">Вы авторизованы как </item>
+		
+		<item lang="en" id="opc.click_this_link_to_relogin"> Click this link to make relogin.</item>
+		<item lang="ru" id="opc.click_this_link_to_relogin"> Кликните сюда для смены учетной записи.</item>
+		
+	</language_variables>
+</addon>
+

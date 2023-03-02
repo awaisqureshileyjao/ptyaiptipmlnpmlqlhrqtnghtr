@@ -1,0 +1,44 @@
+Legend:
+[+] - new feature/improvement
+[*] - functionality changes
+[!] - bugfix
+
+Version 1.12, 11 February 2019
+
+[+] Compatibility with HTTP2 for old CS-Cart versions is added
+
+Version 1.13, 26 February 2019
+
+[!] PHP notice was removed
+
+Version 1.14, 8 May 2019
+
+[+] Cache system was added for better performance
+
+Version 2.0, 21 May 2020
+
+[+] New Basic Display API from Facebook was integrated
+
+Version 2.1, 1 June 2020
+
+[!] Addon settings were not displayed in Multi-Vendor edition
+
+Version 2.2, 16 June 2020
+
+[!] Error message after addon installation. Fixed
+
+Version 2.3, 19 June 2020
+
+[!] Token generation did not work for Multi-Vendor. Fixed
+
+Version 2.4, 6 July 2020
+
+[+] Caching system was improved
+
+Version 2.5, 5 August 2020
+
+[+] Look and feel of scroller was improved
+
+Version 2.6, 23 November 2020
+
+[!] Rectangle photos were not displayed correctly in scroller

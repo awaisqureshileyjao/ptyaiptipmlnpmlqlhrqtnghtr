@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<addon scheme="3.0" edition_type="ROOT,ULT:VENDOR">
+<id>ab__product_fe06_mytarget_rm</id>
+<version>1.2.0</version>
+<priority>2018</priority>
+<position>0</position>
+<status>active</status>
+<default_language>en</default_language>
+<authors>
+<author>
+<name>AlexBranding</name>
+<email>info@alexbranding.com</email>
+<url>https://alexbranding.com</url>
+</author>
+</authors>
+<supplier>AlexBranding</supplier>
+<supplier_link>https://cs-cart.alexbranding.com</supplier_link>
+<compatibility>
+<dependencies></dependencies>
+<core_version><min>4.3.3</min></core_version>
+<core_edition>ULTIMATE,MULTIVENDOR</core_edition>
+</compatibility>
+<settings edition_type="ROOT,ULT:VENDOR">
+<sections>
+<section id="settings" edition_type="ROOT,ULT:VENDOR">
+<items>
+<item id="counter_id">
+<type>text</type>
+</item>
+<item id="list">
+<type>text</type>
+<default_value>1</default_value>
+</item>
+<item id="code"><type>hidden</type><default_value>ABA-nbe9XxiEueCwuvK8DP613</default_value></item>
+<item id="build"><type>hidden</type><default_value>394</default_value></item>
+</items>
+</section>
+</sections>
+</settings>
+</addon>

@@ -1,0 +1,1 @@
+{style src="addons/csc_sync_rates/styles.less"}

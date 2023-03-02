@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<addon scheme="3.0">
+    <id>ecl_instagram_feed</id>
+    <version>2.6</version>
+    <priority>2900</priority>
+    <position>0</position>
+    <supplier>eCom Labs</supplier>
+    <supplier_link>https://www.ecom-labs.com</supplier_link>
+    <status>active</status>
+    <authors>
+        <author>
+            <name>eCom Labs</name>
+            <email>contact@ecom-labs.com</email>
+            <url>https://www.ecom-labs.com</url>
+            <phone>+7 963 234 30 03</phone>
+        </author>
+    </authors>
+    <default_language>en</default_language>
+    <settings edition_type="ROOT,ULT:VENDOR">
+        <sections>
+            <section id="general">
+                <items>
+                    <item id="app_id">
+                        <type>input</type>
+                        <default_value/>
+                    </item>
+                    <item id="app_secret">
+                        <type>input</type>
+                        <default_value/>
+                    </item>
+                    <item id="instagram_token">
+                        <type>input</type>
+                        <default_value/>
+                    </item>
+                    <item id="instagram_token_expiry">
+                        <type>hidden</type>
+                        <default_value/>
+                    </item>
+                    <item id="generator">
+                        <type>template</type>
+                        <default_value>generator.tpl</default_value>
+                    </item>
+                </items>
+            </section>
+        </sections>
+    </settings>
+    <functions>
+        <item for="install">fn_ecl_instagram_feed_install</item>
+    </functions>
+<marketplace_product_id>1770</marketplace_product_id><marketplace_license_number>MP315-BXH0-453N-C4T2-2VE7</marketplace_license_number></addon>

@@ -1,0 +1,13 @@
+/* add-on icon */
+#addon_ath_font_awesomeinstalled .bg-icon,
+#addon_ath_font_awesome .bg-icon {
+    background-image: url('../../../media/images/addons/ath_font_awesome/images/addon_icon.png');
+    background-size: contain;
+    background-color: transparent;
+    border: 0px;
+}
+#addon_ath_font_awesomeinstalled .bg-icon i,
+#addon_ath_font_awesome .bg-icon i {
+    display: none;
+}
+

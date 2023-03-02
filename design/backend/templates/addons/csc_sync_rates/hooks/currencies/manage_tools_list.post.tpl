@@ -1,0 +1,1 @@
+ <li>{btn type="list" text=__("csrc.sync_all_now") href="csc_sync_rates.sync?redirect_url={$config.current_url|urlencode}" class="cm-confirm"}</li>   

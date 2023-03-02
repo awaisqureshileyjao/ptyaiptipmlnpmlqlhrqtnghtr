@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<addon scheme="3.0" edition_type="ROOT,ULT:VENDOR">
+<id>ab__fast_navigation</id>
+<version>1.8.0</version>
+<priority>2019</priority>
+<position>0</position>
+<status>active</status>
+<default_language>en</default_language>
+<authors>
+<author>
+<name>AlexBranding</name>
+<email>info@alexbranding.com</email>
+<url>https://alexbranding.com</url>
+</author>
+</authors>
+<supplier>AlexBranding</supplier>
+<supplier_link>https://cs-cart.alexbranding.com</supplier_link>
+<ab>
+<hash>a62da58323b13ca66fcef8436b0b84c674fb4514, 2020-07-02 10:09:53</hash>
+<compatibility>
+<dependencies>
+<ab__addons_manager><min>2.3.3</min></ab__addons_manager>
+</dependencies>
+</compatibility>
+</ab>
+<compatibility>
+<dependencies>ab__addons_manager</dependencies>
+<core_version><min>4.11.1</min></core_version>
+<core_edition>ULTIMATE,MULTIVENDOR</core_edition>
+</compatibility>
+<settings edition_type="ROOT,ULT:VENDOR">
+<sections>
+<section id="settings" edition_type="ROOT,ULT:VENDOR">
+<items>
+<item id="load_by_ajax"><type>checkbox</type><default_value>Y</default_value></item>
+<item id="add_watermarks"><type>checkbox</type><default_value>N</default_value></item>
+<item id="code"><type>hidden</type><default_value>ABA-fN3cEBHTLxzYl8VwrHY9n</default_value></item>
+<item id="build"><type>hidden</type><default_value>666</default_value></item>
+</items>
+</section>
+</sections>
+</settings>
+<functions>
+<item for="install">fn_ab__fast_navigation_install</item>
+</functions>
+<queries>
+<item for="install">REPLACE INTO ?:privileges (privilege, is_default, section_id, group_id, is_view) VALUES ('ab__fn.data.manage', 'Y', 'ab__addons', 'ab__fast_navigation', 'N')</item>
+<item for="install">REPLACE INTO ?:privileges (privilege, is_default, section_id, group_id, is_view) VALUES ('ab__fn.data.view', 'Y', 'ab__addons', 'ab__fast_navigation', 'Y')</item>
+<item for="uninstall">DELETE FROM ?:privileges WHERE section_id = 'ab__fast_navigation' OR group_id = 'ab__fast_navigation'</item>
+</queries>
+</addon>

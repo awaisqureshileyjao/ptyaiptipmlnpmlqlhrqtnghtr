@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<addon scheme='3.0'>
+    <id>softvira_currency_converter</id>
+    <version>1.0</version>
+    <name>Currency Converter</name>
+    <description>Select currency based on geolocation</description>
+    <priority>100500</priority>
+</addon>

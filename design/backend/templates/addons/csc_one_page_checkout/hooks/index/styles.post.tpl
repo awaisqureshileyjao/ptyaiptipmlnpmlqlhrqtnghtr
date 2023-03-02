@@ -1,0 +1,1 @@
+{style src="addons/csc_one_page_checkout/styles.less"}

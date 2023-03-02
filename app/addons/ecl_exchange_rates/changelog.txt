@@ -1,0 +1,10 @@
+Legend:
+[+] - new feature/improvement
+[*] - functionality changes
+[!] - bugfix
+
+Version 1.11, 5 May 2021
+
+[*] PayPal and Gogole Finance services are marked as deprecated now
+[+] Alpha Vantage service is added to the list of service providers
+[!] Individual update for certain currency caused error message. Fixed

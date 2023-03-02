@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<addon scheme="3.0" edition_type="ROOT,ULT:VENDOR">
+<id>ab__product_feed_export</id>
+<version>3.7.2</version>
+<hash>7fc6ef7c7f192f58820d9e9cd4e92a66b77d6131, 2019-12-06 11:39:51 +0200</hash>
+<priority>20160700</priority>
+<position>0</position>
+<status>active</status>
+<default_language>en</default_language>
+<authors>
+<author>
+<name>AlexBranding</name>
+<email>info@alexbranding.com</email>
+<url>https://alexbranding.com</url>
+</author>
+</authors>
+<supplier>AlexBranding</supplier>
+<supplier_link>https://cs-cart.alexbranding.com</supplier_link>
+<compatibility>
+<conflicts></conflicts>
+<dependencies></dependencies>
+<core_version><min>4.10.1</min></core_version>
+<core_edition>ULTIMATE,MULTIVENDOR</core_edition>
+</compatibility>
+<settings edition_type="ROOT,ULT:VENDOR">
+<sections>
+<section id="settings" edition_type="ROOT,ULT:VENDOR">
+<items>
+<item id="cron_key">
+<type>text</type>
+<default_value>4s6WtvVF4mATnjb</default_value>
+</item>
+<item id="code"><type>hidden</type><default_value>ABA-R7n33sBDcsCgenTWBK7Xs</default_value></item>
+<item id="build"><type>hidden</type><default_value>557</default_value></item>
+</items>
+</section>
+</sections>
+</settings>
+<functions>
+<item for="install">fn_ab__product_feed_export_install</item>
+</functions>
+<queries>
+<item for="install">CREATE TABLE IF NOT EXISTS `?:ab__pfe_features_names` (
+`item_id` int(11) unsigned NOT NULL auto_increment,
+`category_id` int(11) unsigned NOT NULL,
+`feature_id` int(11) unsigned NOT NULL,
+`datafeed_id` int(11) unsigned NOT NULL,
+PRIMARY KEY (`item_id`)
+) DEFAULT CHARSET=utf8;
+</item>
+<item for="install">CREATE TABLE IF NOT EXISTS `?:ab__pfe_feature_name_descriptions` (
+`item_id` int(11) unsigned NOT NULL,
+`name` varchar(255) NOT NULL default '',
+`lang_code` char(2) NOT NULL default '',
+PRIMARY KEY (`item_id`, `lang_code`)
+) DEFAULT CHARSET=utf8;
+</item>
+<item for="install">
+CREATE TABLE IF NOT EXISTS `?:ab__pfe_datafeeds` (
+`datafeed_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+`company_id` int(10) unsigned NOT NULL DEFAULT '0',
+`name` varchar(255) CHARACTER SET utf8 NOT NULL,
+`filename` varchar(255) CHARACTER SET utf8 NOT NULL,
+`ext` varchar(5) CHARACTER SET utf8 NOT NULL,
+`template_id` int(10) unsigned NOT NULL DEFAULT '0',
+`lang_code` char(2) CHARACTER SET utf8 NOT NULL,
+`currency_code` varchar(10) NOT NULL,
+`brand_id` int(10) unsigned NOT NULL DEFAULT '0',
+`max_images` tinyint(3) unsigned NOT NULL,
+`images_full_size` char(1) CHARACTER SET utf8 NOT NULL DEFAULT 'Y',
+`use_watermark` char(1) CHARACTER SET utf8 NOT NULL DEFAULT 'N',
+`export_variations` char(1) CHARACTER SET utf8 NOT NULL DEFAULT 'N',
+`promotions_apply` char(1) CHARACTER SET utf8 NOT NULL DEFAULT 'N',
+`auto_generate` char(1) CHARACTER SET utf8 NOT NULL DEFAULT 'N',
+`login` varchar(10) NOT NULL,
+`password` varchar(10) NOT NULL,
+`price_from` decimal(10,2) unsigned NOT NULL DEFAULT '0.00',
+`price_to` decimal(10,2) unsigned NOT NULL DEFAULT '0.00',
+`only_in_stock` char(1) CHARACTER SET utf8 NOT NULL DEFAULT 'Y',
+`only_with_description` char(1) CHARACTER SET utf8 NOT NULL DEFAULT 'N',
+`only_with_images` char(1) CHARACTER SET utf8 NOT NULL DEFAULT 'N',
+`stop_words` varchar(3000) CHARACTER SET utf8 NOT NULL,
+`stop_words_search_fields` text CHARACTER SET utf8 NOT NULL,
+`included_categories` text CHARACTER SET utf8 NOT NULL,
+`included_subcategories` char(1) CHARACTER SET utf8 NOT NULL DEFAULT 'N',
+`features_conditions` text CHARACTER SET utf8 NOT NULL,
+`included_products` text CHARACTER SET utf8 NOT NULL,
+`excluded_categories` text CHARACTER SET utf8 NOT NULL,
+`excluded_subcategories` char(1) CHARACTER SET utf8 NOT NULL DEFAULT 'N',
+`excluded_products` text CHARACTER SET utf8 NOT NULL,
+`params` text NOT NULL,
+`status` char(1) CHARACTER SET utf8 NOT NULL DEFAULT 'A',
+`position` mediumint(5) unsigned NOT NULL DEFAULT '0',
+`output_to_display` char(1) CHARACTER SET utf8 NOT NULL DEFAULT 'N',
+PRIMARY KEY (`datafeed_id`),
+KEY `company_id` (`company_id`)
+) DEFAULT CHARSET=utf8;
+</item>
+<item for="install">
+CREATE TABLE IF NOT EXISTS `?:ab__pfe_templates` (
+`template_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+`template` text CHARACTER SET utf8 NOT NULL,
+`name` varchar(255) CHARACTER SET utf8 NOT NULL,
+`position` mediumint(9) NOT NULL DEFAULT '0',
+`status` char(1) NOT NULL DEFAULT 'A',
+PRIMARY KEY (`template_id`)
+) DEFAULT CHARSET=utf8;
+</item>
+<item for="install">
+CREATE TABLE IF NOT EXISTS `?:ab__pfe_datafeed_status` (
+`datafeed_id` int(10) unsigned NOT NULL,
+`timestamp` int(11) unsigned NOT NULL DEFAULT 0,
+`total_products` mediumint(6) unsigned NULL DEFAULT 0,
+`loaded_products` mediumint(6) unsigned NULL DEFAULT 0,
+PRIMARY KEY (`datafeed_id`)
+) DEFAULT CHARSET=utf8;
+</item>
+<item for="install">REPLACE INTO ?:privileges (privilege, is_default, section_id, group_id, is_view) VALUES ('ab__pfe.view', 'Y', 'ab__addons', 'ab__product_feed_export', 'Y')</item>
+<item for="install">REPLACE INTO ?:privileges (privilege, is_default, section_id, group_id, is_view) VALUES ('ab__pfe.manage', 'Y', 'ab__addons', 'ab__product_feed_export', 'N')</item>
+<item for="uninstall">DELETE FROM ?:privileges WHERE section_id = 'ab__product_feed_export' OR group_id = 'ab__product_feed_export'</item>
+</queries>
+</addon>

@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<addon scheme="3.0" edition_type="ROOT,ULT:VENDOR">
+    <id>ath_font_awesome</id>
+    <version>4.3</version>
+    <!--  2017-06-24  -->
+    <default_language>en</default_language>
+    <priority>429496729402</priority>
+    <status>active</status>
+    
+	<compatibility>
+		<core_version>
+			<min>4.4.1</min>
+		</core_version>
+	</compatibility>
+    
+    <authors>
+        <author>
+            <name>ThemeHills</name>
+            <email>themehills@gmail.com</email>
+            <url>https://themehills.com</url>
+        </author>
+    </authors>
+    
+    <supplier>ThemeHills</supplier>
+    <supplier_link>https://themehills.com/</supplier_link>
+   
+       <settings layout="separate" edition_type="MVE:ROOT,ULT:VENDOR">
+        <sections>
+            <section id="configure">
+                <items>
+   
+					<item id="cart_icon">
+						<type>selectbox</type>
+						<default_value>fa-shopping-cart</default_value>
+						<variants>
+
+							<item id="default"></item>
+							<item id="default_with_additional"></item>
+
+							<item id="fa-shopping-cart"></item>
+							<item id="fa-shopping-bag"></item>
+							<item id="fa-shopping-basket"></item>
+
+						</variants>
+					</item>
+					
+					<item id="user_icon">
+						<type>selectbox</type>
+						<default_value>fa-user</default_value>
+						<variants>
+
+							<item id="default"></item>
+							<item id="default_with_additional"></item>
+
+							<item id="fa-user"></item>
+							<item id="fa-user-o"></item>
+							<item id="fa-user-circle"></item>
+							<item id="fa-user-circle-o"></item>
+							<item id="fa-user-secret"></item>
+							<item id="fa-user-md"></item>
+
+						</variants>
+					</item>
+					
+	                <item id="aditional_settings">
+                        <type>header</type>
+                    </item>
+                    
+                    <item id="font_size">
+	                    <type>input</type>
+	                    <default_value>120%</default_value>
+                    </item>
+
+                    <item id="vertical_align">
+						<type>selectbox</type>
+						<default_value>baseline</default_value>
+						<variants>
+
+							<item id="initial"></item>
+
+							<item id="top"></item>
+							<item id="middle"></item>
+							<item id="baseline"></item>
+							<item id="bottom"></item>
+
+						</variants>
+					</item>
+					
+					<item id="alert">
+	                    <type>template</type>
+	                    <default_value>alert.tpl</default_value>
+	                </item>
+                    
+                    <item id="drop_down">
+						<type>selectbox</type>
+						<default_value>click</default_value>
+						<variants>
+
+							<item id="hover"></item>
+							<item id="click"></item>
+
+						</variants>
+					</item>
+					
+					<item id="color_on">
+                        <type>checkbox</type>
+                        <default_value>N</default_value>
+                    </item>
+					
+					<item id="colors_and_other">
+	                    <type>template</type>
+	                    <default_value>colors_and_other.tpl</default_value>
+	                </item>
+				</items>
+				
+			</section>
+		</sections>
+	</settings>
+	
+	<queries>
+
+        <item>DROP TABLE IF EXISTS ?:ath_font_awesome;</item>
+        <item>
+            CREATE TABLE `?:ath_font_awesome` (
+                `company_id` int(11) unsigned NOT NULL DEFAULT '0',
+                `settings` mediumtext,
+                PRIMARY KEY  (`company_id`)
+            ) Engine=MyISAM DEFAULT CHARSET UTF8;
+        </item>
+        <item for="uninstall">DROP TABLE IF EXISTS ?:ath_font_awesome;</item>
+
+    </queries>
+    
+</addon>

@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<addon scheme="3.0" edition_type="ROOT,ULT:VENDOR">
+<id>abt__unitheme2</id>
+<version>4.11.5.b</version>
+<priority>10000</priority>
+<position>0</position>
+<status>active</status>
+<default_language>en</default_language>
+<ab>
+<hash>95d5315d93141f660fd0cca921a3f0a599d7412a, 2020-09-10 14:36:45</hash>
+<layout_version>ult2</layout_version>
+<compatibility>
+<dependencies>
+<ab__addons_manager><min>2.3.3</min></ab__addons_manager>
+</dependencies>
+</compatibility>
+</ab>
+<authors>
+<author>
+<name>AlexBranding</name>
+<email>info@alexbranding.com</email>
+<url>https://alexbranding.com</url>
+</author>
+</authors>
+<supplier>AlexBranding</supplier>
+<supplier_link>https://cs-cart.alexbranding.com</supplier_link>
+<compatibility>
+<dependencies>ab__addons_manager,banners</dependencies>
+<conflicts>rus_theme_style,abt__unitheme,abt__youpitheme,ab__auto_loading_products,ab__advanced_banners</conflicts>
+<core_version><min>4.11.5</min></core_version>
+<core_edition>ULTIMATE,MULTIVENDOR</core_edition>
+</compatibility>
+<settings edition_type="ROOT,ULT:VENDOR">
+<sections>
+<section id="settings" edition_type="ROOT,ULT:VENDOR">
+<items>
+<item id="code"><type>hidden</type><default_value>ABA-s52HrCp4WpnZerLopmJp7</default_value></item>
+<item id="build"><type>hidden</type><default_value>693</default_value></item>
+</items>
+</section>
+</sections>
+</settings>
+<queries>
+<item for="uninstall">DELETE FROM ?:privileges WHERE section_id = 'abt__unitheme2' OR group_id = 'abt__unitheme2'</item>
+<item>REPLACE INTO ?:privileges (privilege, is_default, section_id, group_id, is_view)
+VALUES ('abt__ut2.settings.view', 'Y', 'ab__addons', 'abt__unitheme2', 'Y')
+,('abt__ut2.settings.manage', 'Y', 'ab__addons', 'abt__unitheme2', 'N')
+,('abt__ut2.buy_together.manage', 'Y', 'ab__addons', 'abt__unitheme2', 'N');
+</item>
+<item>
+CREATE TABLE IF NOT EXISTS ?:abt__ut2_settings (
+`section` varchar(100) NOT NULL,
+`name` varchar(100) NOT NULL,
+`company_id` int(11) unsigned NOT NULL DEFAULT '0',
+`lang_code` char(2) NOT NULL DEFAULT '',
+`value` mediumtext,
+PRIMARY KEY (`section`,`name`,`company_id`,`lang_code`)
+) DEFAULT CHARSET=utf8;
+</item>
+<item>
+CREATE TABLE IF NOT EXISTS ?:abt__ut2_less_settings (
+`section` varchar(100) NOT NULL,
+`name` varchar(100) NOT NULL,
+`company_id` int(11) unsigned NOT NULL DEFAULT '0',
+`value` mediumtext,
+`style` varchar(100) NOT NULL DEFAULT '',
+PRIMARY KEY (`section`,`name`,`company_id`,`style`)
+) DEFAULT CHARSET=utf8;
+</item>
+<item>
+CREATE TABLE IF NOT EXISTS ?:abt__ut2_objects_banners (
+`link_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+`object` enum('category','block') NOT NULL DEFAULT 'category',
+`object_id` int(11) NOT NULL DEFAULT '0',
+`banner_id` int(11) NOT NULL DEFAULT '0',
+`position` int(3) NOT NULL DEFAULT '1',
+`priority` int(2) NOT NULL DEFAULT '1',
+`width` enum('1','2') NOT NULL DEFAULT '1',
+PRIMARY KEY (`link_id`)
+) DEFAULT CHARSET=utf8;
+</item>
+<item>
+CREATE TABLE IF NOT EXISTS ?:abt__ut2_microdata (
+`id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+`company_id` int(11) unsigned NOT NULL DEFAULT 0,
+`field` varchar(255) NOT NULL DEFAULT '',
+PRIMARY KEY (`id`)
+) DEFAULT CHARSET=utf8;
+</item>
+<item>
+CREATE TABLE IF NOT EXISTS ?:abt__ut2_microdata_description (
+`id` mediumint(8) unsigned NOT NULL,
+`value` varchar(255) NOT NULL DEFAULT '',
+`lang_code` char(2) NOT NULL DEFAULT '',
+PRIMARY KEY (`id`, `lang_code`)
+) DEFAULT CHARSET=utf8;
+</item>
+</queries>
+<functions>
+<item for="install">fn_abt__ut2_install</item>
+</functions>
+</addon>

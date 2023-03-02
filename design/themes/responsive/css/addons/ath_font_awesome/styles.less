@@ -1,0 +1,316 @@
+//cart
+.small_fixes_mini_cart() {
+	.top-cart-content .ty-dropdown-box__title .ty-minicart__icon.ty-icon-moon-commerce,
+	.ty-minicart__icon {
+		position: static;
+		display: inline-block;
+		font-size: @ath_fa_font-size;
+		margin-right: 3px;
+		vertical-align: @ath_fa_vertical-align;
+	}
+	.top-cart-content .ty-dropdown-box__title .ty-minicart__icon.ty-icon-moon-commerce {
+		vertical-align: top;
+	}
+	div.top-cart-content .ty-dropdown-box__title,
+	.ty-minicart-title,
+	.ty-icon-moon-commerce + .ty-minicart-title {
+		padding-left: 0;
+	}
+
+	//hover
+	.cart_dd_hover() when (@ath_fa_drop-down = hover) {
+		.top-cart-content,
+		.th_fa_top-cart-content {
+			.ty-dropdown-box:hover .ty-dropdown-box__content {
+				display: block !important;
+			}
+			.ty-dropdown-box__title.open {
+				z-index: auto;
+			}
+		}
+	}
+	.cart_dd_hover();
+}
+
+.change_basket_icon() when (@ath_cart_icon = default_with_additional) {
+	.small_fixes_mini_cart();
+}
+.change_basket_icon() when (@ath_cart_icon = fa-shopping-cart) {
+	i.ty-icon-moon-commerce,
+    .ty-icon-basket {
+        font-family: FontAwesome;
+		
+		&:before {
+			content: "\f07a";
+		}
+    }
+	.small_fixes_mini_cart();
+}
+.change_basket_icon() when (@ath_cart_icon = fa-shopping-bag) {
+	i.ty-icon-moon-commerce,
+    .ty-icon-basket {
+        font-family: FontAwesome;
+		
+		&:before {
+			content: "\f290";
+		}
+    }
+	.small_fixes_mini_cart();
+}
+.change_basket_icon() when (@ath_cart_icon = fa-shopping-basket) {
+	i.ty-icon-moon-commerce,
+    .ty-icon-basket {
+        font-family: FontAwesome;
+		
+		&:before {
+			content: "\f291";
+		}
+    }
+	.small_fixes_mini_cart();
+}
+.change_basket_icon();
+
+//user
+.small_fixes_profile_dd() {
+	.ty-account-info__title i.ty-icon-moon-user,
+	.ty-account-info__title .ty-icon-user {
+		font-size: @ath_fa_font-size;
+		display: inline-block;
+		vertical-align: @ath_fa_vertical-align;
+	}
+
+	//hover
+	.profile_dd() when (@ath_fa_drop-down = hover) {		
+		.top-my-account.ty-dropdown-box:hover .ty-dropdown-box__content,
+		.th_fa_top-my-account.ty-dropdown-box:hover .ty-dropdown-box__content {
+			display: block !important;
+		}
+	}
+	.profile_dd();
+}
+
+.change_user_icon() when (@ath_user_icon = default_with_additional) {
+	.small_fixes_profile_dd();
+}
+.change_user_icon() when (@ath_user_icon = fa-user) {
+    .ty-icon-user,
+    i.ty-icon-moon-user {
+        font-family: FontAwesome;
+		
+		&:before {
+			content: "\f007";
+		}
+    }
+	.small_fixes_profile_dd();
+}
+.change_user_icon() when (@ath_user_icon = fa-user-o) {
+    .ty-icon-user,
+    i.ty-icon-moon-user {
+        font-family: FontAwesome;
+		
+		&:before {
+			content: "\f2c0";
+		}
+    }
+	.small_fixes_profile_dd();
+}
+.change_user_icon() when (@ath_user_icon = fa-user-circle) {
+    .ty-icon-user,
+    i.ty-icon-moon-user {
+        font-family: FontAwesome;
+		
+		&:before {
+			content: "\f2bd";
+		}
+    }
+	.small_fixes_profile_dd();
+}
+.change_user_icon() when (@ath_user_icon = fa-user-circle-o) {
+    .ty-icon-user,
+    i.ty-icon-moon-user {
+        font-family: FontAwesome;
+		
+		&:before {
+			content: "\f2be";
+		}
+    }
+	.small_fixes_profile_dd();
+}
+.change_user_icon() when (@ath_user_icon = fa-user-secret) {
+    .ty-icon-user,
+    i.ty-icon-moon-user {
+        font-family: FontAwesome;
+		
+		&:before {
+			content: "\f21b";
+		}
+    }
+	.small_fixes_profile_dd();
+}
+.change_user_icon() when (@ath_user_icon = fa-user-md) {
+    .ty-icon-user,
+    i.ty-icon-moon-user {
+        font-family: FontAwesome;
+		
+		&:before {
+			content: "\f0f0";
+		}
+    }
+	.small_fixes_profile_dd();
+}
+.change_user_icon();
+
+//colors
+
+.ath_fa_change_colors() when (@ath_fa_color_on = Y) {
+	//cart
+	.top-cart-content,
+	.th_fa_top-cart-content {
+		#tygh_container & span {
+			color: inherit;
+		}
+		
+		.ty-dropdown-box__title a,
+		.ty-minicart-title,
+		.ty-dropdown-box  .ty-icon-down-micro {
+			color: @ath_fa_font_color;
+		}
+		.ty-dropdown-box__title i.ty-icon-moon-commerce,
+		.ty-icon-basket {
+			color: @ath_fa_bg_icon_color;
+		}
+		.ty-dropdown-box__title,
+		.ty-dropdown-box__title:hover {
+			background: @ath_fa_bg_color;
+		}
+
+		.ty-dropdown-box:hover .ty-dropdown-box__title a,
+		.ty-dropdown-box__title.open a,
+		.ty-dropdown-box__title.open .ty-icon-down-micro,
+		.ty-dropdown-box__title.open .ty-minicart-title,
+		.ty-dropdown-box:hover .ty-icon-down-micro {
+			color: @ath_fa_font_color_active;
+		}
+		.ty-dropdown-box:hover i.ty-icon-moon-commerce,
+		.ty-dropdown-box:hover .ty-icon-basket,
+		.ty-dropdown-box__title.open i.ty-icon-moon-commerce,
+		.ty-dropdown-box__title.open .ty-icon-basket {
+			color: @ath_fa_bg_icon_color_active;
+		}
+		.ty-dropdown-box .ty-dropdown-box__title.open,
+		.ty-dropdown-box:hover .ty-dropdown-box__title,
+		.ty-dropdown-box:hover .ty-dropdown-box__title:hover {
+			background: @ath_fa_bg_color_active;
+		}	
+	}
+	
+	//user
+	.top-my-account,
+	.th_fa_top-my-account {
+		#tygh_container & span {
+			color: inherit;
+		}
+			
+		.ty-dropdown-box__title a,
+		&.ty-dropdown-box  .ty-icon-down-micro {
+			color: @ath_fa_font_color;
+		}
+		i.ty-icon-moon-user,
+		.ty-icon-user {
+			color: @ath_fa_bg_icon_color;
+		}
+		.ty-dropdown-box__title,
+		.ty-dropdown-box__title:hover {
+			background: @ath_fa_bg_color;
+		}
+
+		.ty-dropdown-box__title.open a,
+		.ty-dropdown-box__title.open .ty-icon-down-micro,
+		&.ty-dropdown-box:hover .ty-dropdown-box__title a,
+		&.ty-dropdown-box:hover .ty-icon-down-micro {
+			color: @ath_fa_font_color_active;
+		}
+		&.ty-dropdown-box:hover i.ty-icon-moon-user,
+		&.ty-dropdown-box:hover .ty-icon-user,
+		.ty-dropdown-box__title.open i.ty-icon-moon-user,
+		.ty-dropdown-box__title.open .ty-icon-user {
+			color: @ath_fa_bg_icon_color_active;
+		}
+		&.ty-dropdown-box .ty-dropdown-box__title.open,
+		&.ty-dropdown-box:hover .ty-dropdown-box__title,
+		&.ty-dropdown-box:hover .ty-dropdown-box__title:hover {
+			background: @ath_fa_bg_color_active;
+		}	
+	}
+	//hover
+	.ath_fa_change_colors_hover() when (@ath_fa_drop-down = hover) {
+		
+		.top-cart-content,
+		.th_fa_top-cart-content {	
+			.ty-dropdown-box__title.open {
+				z-index: auto;
+			}
+			
+			.ty-dropdown-box__title.open a,
+			.ty-dropdown-box__title.open .ty-icon-down-micro,
+			.ty-dropdown-box__title.open .ty-minicart-title {
+				color: @ath_fa_font_color;
+			}
+			.ty-dropdown-box__title.open i.ty-icon-moon-commerce,
+			.ty-dropdown-box__title.open .ty-icon-basket {
+				color: @ath_fa_bg_icon_color;
+			}
+			.ty-dropdown-box .ty-dropdown-box__title.open {
+				background: @ath_fa_bg_color;
+			}
+	
+			.ty-dropdown-box:hover .ty-dropdown-box__title.open a,
+			.ty-dropdown-box:hover .ty-dropdown-box__title.open .ty-icon-down-micro,
+			.ty-dropdown-box:hover .ty-dropdown-box__title.open .ty-minicart-title {
+				color: @ath_fa_font_color_active;
+			}
+			.ty-dropdown-box:hover .ty-dropdown-box__title.open i.ty-icon-moon-commerce,
+			.ty-dropdown-box:hover .ty-dropdown-box__title.open .ty-icon-basket {
+				color: @ath_fa_bg_icon_color_active;
+			}
+			.ty-dropdown-box:hover .ty-dropdown-box__title.open {
+				background: @ath_fa_bg_color_active;
+			}
+		}
+
+		.top-my-account,
+		.th_fa_top-my-account {
+			.ty-dropdown-box__title.open {
+				z-index: auto;
+			}
+			
+			.ty-dropdown-box__title.open a,
+			.ty-dropdown-box__title.open .ty-icon-down-micro {
+				color: @ath_fa_font_color;
+			}
+			.ty-dropdown-box__title.open i.ty-icon-moon-user,
+			.ty-dropdown-box__title.open .ty-icon-user {
+				color: @ath_fa_bg_icon_color;
+			}
+			&.ty-dropdown-box .ty-dropdown-box__title.open {
+				background: @ath_fa_bg_color;
+			}
+	
+			&.ty-dropdown-box:hover .ty-dropdown-box__title.open a,
+			&.ty-dropdown-box:hover .ty-dropdown-box__title.open .ty-icon-down-micro {
+				color: @ath_fa_font_color_active;
+			}
+			&.ty-dropdown-box:hover .ty-dropdown-box__title.open i.ty-icon-moon-user,
+			&.ty-dropdown-box:hover .ty-dropdown-box__title.open .ty-icon-user {
+				color: @ath_fa_bg_icon_color_active;
+			}
+			&.ty-dropdown-box:hover .ty-dropdown-box__title.open {
+				background: @ath_fa_bg_color_active;
+			}	
+		}	
+	}
+	.ath_fa_change_colors_hover()
+}
+.ath_fa_change_colors();
+
+

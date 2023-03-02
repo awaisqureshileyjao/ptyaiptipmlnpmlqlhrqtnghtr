@@ -1,0 +1,1 @@
+<li>{btn type="list" class="cm-confirm" text=__("exchange_rates.get_live_rates") href="exchange_rates.update"}</li>

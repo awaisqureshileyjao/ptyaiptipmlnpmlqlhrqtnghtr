@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<block_scheme scheme="1.0">
+  <settings>
+    <default_language>en</default_language>
+  </settings>  
+  <location dispatch="checkout.checkout" is_default="0" lang_code="en" name="One page checkout">
+    <containers>
+      <container position="FOOTER" width="16" />
+      <container position="CONTENT" width="16" >
+        <grid width="12" user_class="" linked_to_default="Y" status="A" offset="0" omega="0" alpha="1" wrapper="" content_align="FULL_WIDTH" html_element="div" clear="0">
+          <blocks>
+            <block>
+              <type><![CDATA[main]]></type>
+              <properties><![CDATA[]]></properties>
+              <fpc_exclude_cache><![CDATA[N]]></fpc_exclude_cache>
+              <lang_code><![CDATA[en]]></lang_code>
+              <name><![CDATA[Main content]]></name>
+              <object_id><![CDATA[0]]></object_id>
+              <object_type><![CDATA[]]></object_type>
+              <content><![CDATA[]]></content>
+              <availability/>
+              <object_ids><![CDATA[]]></object_ids>
+              <wrapper><![CDATA[blocks/wrappers/mainbox_general.tpl]]></wrapper>
+              <user_class><![CDATA[]]></user_class>
+              <order><![CDATA[0]]></order>
+              <status><![CDATA[A]]></status>
+              <translations>
+			   		<translation lang_code="ru"><![CDATA[Главное содержимое]]></translation>
+              </translations>
+              <contents/>
+            </block>
+          </blocks>
+        </grid>
+        <grid width="4" user_class="" linked_to_default="Y" status="A" offset="0" omega="1" alpha="0" wrapper="" content_align="FULL_WIDTH" html_element="div" clear="0">
+          <blocks>
+            <block>
+              <type><![CDATA[checkout]]></type>
+              <properties>
+                <template><![CDATA[blocks/checkout/summary.tpl]]></template>
+              </properties>
+              <fpc_exclude_cache><![CDATA[N]]></fpc_exclude_cache>
+              <lang_code><![CDATA[en]]></lang_code>
+              <name><![CDATA[Order total]]></name>
+              <object_id><![CDATA[0]]></object_id>
+              <object_type><![CDATA[]]></object_type>
+              <content><![CDATA[]]></content>
+              <availability/>
+              <object_ids><![CDATA[]]></object_ids>
+              <wrapper><![CDATA[blocks/wrappers/sidebox_important.tpl]]></wrapper>
+              <user_class><![CDATA[]]></user_class>
+              <order><![CDATA[0]]></order>
+              <status><![CDATA[A]]></status>
+              <translations>
+					<translation lang_code="ru"><![CDATA[Сумма заказа]]></translation>
+				</translations>
+              <contents/>
+            </block>
+            <block>
+              <type><![CDATA[checkout]]></type>
+              <properties>
+                <template><![CDATA[addons/csc_one_page_checkout/blocks/checkout/products_in_cart_with_icons.tpl]]></template>
+              </properties>
+              <fpc_exclude_cache><![CDATA[N]]></fpc_exclude_cache>
+              <lang_code><![CDATA[en]]></lang_code>
+              <name><![CDATA[Products in cart]]></name>
+              <object_id><![CDATA[0]]></object_id>
+              <object_type><![CDATA[]]></object_type>
+              <content><![CDATA[]]></content>
+              <availability/>
+              <object_ids><![CDATA[]]></object_ids>
+              <wrapper><![CDATA[blocks/wrappers/sidebox_important.tpl]]></wrapper>
+              <user_class><![CDATA[]]></user_class>
+              <order><![CDATA[1]]></order>
+              <status><![CDATA[A]]></status>
+              <translations>
+				<translation lang_code="ru"><![CDATA[Товары в корзине]]></translation>
+			</translations>
+              <contents/>
+            </block>
+          </blocks>
+        </grid>
+      </container>
+      <container position="HEADER" width="16" />
+      <container position="TOP_PANEL" width="16" />
+    </containers>
+    <translations>
+		<translation lang_code="ru">
+			<meta_keywords><![CDATA[]]></meta_keywords>
+			<page_title><![CDATA[]]></page_title>
+			<meta_description><![CDATA[]]></meta_description>
+			<name>Одностраничный чекаут</name>
+		</translation>
+	</translations>
+  </location>
+</block_scheme>

@@ -1,0 +1,1 @@
+{style src="addons/ecl_instagram_feed/styles.less"}

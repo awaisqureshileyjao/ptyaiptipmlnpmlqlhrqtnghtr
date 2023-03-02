@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<addon scheme='3.0'>
+    <id>softvira_popups</id>
+    <version>1.0</version>
+    <name>Popups Notifications</name>
+    <description>Show popups</description>
+    <priority>100500</priority>
+</addon>

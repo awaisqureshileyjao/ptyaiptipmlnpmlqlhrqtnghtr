@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<addon scheme="3.0" edition_type="ROOT,ULT:VENDOR">
+<id>ab__product_fe05_facebook_ads</id>
+<version>1.5.1</version>
+<hash>0f5a80e28e744c569f6ef12e16be16dde8dedd31, 2019-11-21 14:08:05 +0200</hash>
+<priority>2016</priority>
+<position>0</position>
+<status>active</status>
+<default_language>en</default_language>
+<authors>
+<author>
+<name>AlexBranding</name>
+<email>info@alexbranding.com</email>
+<url>https://alexbranding.com</url>
+</author>
+</authors>
+<supplier>AlexBranding</supplier>
+<supplier_link>https://cs-cart.alexbranding.com</supplier_link>
+<compatibility>
+<conflicts></conflicts>
+<dependencies></dependencies>
+<core_version><min>4.3.3</min></core_version>
+<core_edition>ULTIMATE,MULTIVENDOR</core_edition>
+</compatibility>
+<settings edition_type="ROOT,ULT:VENDOR">
+<sections>
+<section id="settings" edition_type="ROOT,ULT:VENDOR">
+<items>
+<item id="fb_pixel_id">
+<type>text</type>
+</item>
+<item id="code"><type>hidden</type><default_value>ABA-09HjnrqtwWyp9rXNct53d</default_value></item>
+<item id="build"><type>hidden</type><default_value>554</default_value></item>
+</items>
+</section>
+</sections>
+</settings>
+<queries>
+<item>
+CREATE TABLE IF NOT EXISTS `?:ab__pfe05_product_conditions` (
+`product_id` mediumint(8) unsigned NOT NULL,
+`value`	varchar(32) NOT NULL default '',
+PRIMARY KEY (`product_id`)
+) Engine=MyISAM DEFAULT CHARSET UTF8;
+</item>
+</queries>
+</addon>
