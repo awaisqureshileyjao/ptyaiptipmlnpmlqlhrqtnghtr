@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/oololivo321/dev.thedelamode.com/
+    - export DEPLOYPATH=/home/oololivo321/git.thedelamode.com/
     - /bin/cp * $DEPLOYPATH
