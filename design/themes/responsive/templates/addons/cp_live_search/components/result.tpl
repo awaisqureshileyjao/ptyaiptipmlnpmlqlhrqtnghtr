@@ -4,7 +4,7 @@
         {if $search_id}
             {$cp_query_params="&search_id=`$search_id`"}
         {/if}
-        <div class="live-search-box cm-popup-box">
+        <div class="live-search-box ui-dialog ui-widget ui-widget-content ui-corner-all ui-front dialog-auto-sized">
             <div class="live-search-content" {if $addons.cp_live_search.popup_mheight}style="max-height: {$addons.cp_live_search.popup_mheight};"{/if}>
                 {if $suggestions}
                     <div class="live-section live-suggestion">
