@@ -1,4 +1,4 @@
-<div class="ty-search-block" style="position: absolute;background: #fff;z-index: 999;left: 0;right: 0;margin-top: 10px;">
+<div class="ty-search-block">
     <form action="{""|fn_url}" name="search_form" method="get">
         <input type="hidden" name="match" value="all" />
         <input type="hidden" name="subcats" value="Y" />
