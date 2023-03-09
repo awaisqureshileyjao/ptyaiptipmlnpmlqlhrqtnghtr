@@ -108,8 +108,8 @@ jQuery.fn.highlight = function (words, options) {
 
 $(document).ready(function(){
     $("#search_input").click(function(){
-        $(".ty-search-block").css({"position":"fixed","left":"0px","top":"0px","display":"block","width":"100%","borderRadius":"0px","zIndex":"1"});
-        /*$(".ty-search-block").dialog({
+       /* $(".ty-search-block").css({"position":"fixed","left":"0px","top":"0px","display":"block","width":"100%","borderRadius":"0px","zIndex":"1"});*/
+        $(".ty-search-block").dialog({
             height: 50,
             width: 350,
             modal: true,
@@ -117,7 +117,7 @@ $(document).ready(function(){
             dialogClass: 'no-close success-dialog'
         });
 
-        $(".ui-dialog").css({"width":"1000px","padding":"100px"});*/
+        $(".ui-dialog").css({"position":"fixed","left":"0px","top":"0px"});
     });
 });
 
