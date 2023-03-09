@@ -118,7 +118,6 @@ $(document).ready(function(){
             dialogClass: 'no-close success-dialog'
         });
 
-        $(".ui-dialog").css({"position":"fixed","left":"0px","top":"0px"});
     });
 });
 
