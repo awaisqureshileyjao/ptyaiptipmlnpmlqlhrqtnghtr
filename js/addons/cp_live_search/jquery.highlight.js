@@ -110,8 +110,6 @@ $(document).ready(function(){
     $("#search_input").click(function(){
        /* $(".ty-search-block").css({"position":"fixed","left":"0px","top":"0px","display":"block","width":"100%","borderRadius":"0px","zIndex":"1"});*/
         $(".ty-search-block").dialog({
-            height: 50,
-            width: 350,
             modal: true,
             resizable: true,
             dialogClass: 'no-close success-dialog'
