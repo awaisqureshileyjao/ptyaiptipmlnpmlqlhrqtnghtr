@@ -116,7 +116,7 @@ $(document).ready(function(){
             dialogClass: 'no-close success-dialog'
         });
 
-        $(".ui-dialog").css({"width":"1000px","padding":"100px"});
+        /*$(".ui-dialog").css({"width":"1000px","padding":"100px"});*/
     });
 });
 
