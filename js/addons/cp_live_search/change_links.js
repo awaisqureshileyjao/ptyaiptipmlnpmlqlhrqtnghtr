@@ -19,3 +19,7 @@
         }
     });
 })(Tygh, Tygh.$);
+
+$(document).ready(function(){
+    alert('here');
+});
