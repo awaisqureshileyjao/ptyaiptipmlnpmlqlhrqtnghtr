@@ -106,7 +106,7 @@ jQuery.fn.highlight = function (words, options) {
     });
 };
 
-/*$(document).ready(function(){
+$(document).ready(function(){
     $("#search_input").click(function(){
         $(".ty-search-block").dialog({
             height: 50,
@@ -116,7 +116,7 @@ jQuery.fn.highlight = function (words, options) {
             dialogClass: 'no-close success-dialog'
         });
 
-        $(".ui-widget-content.ui-dialog").css({"width":"1000px","padding":"100px"});
+        $(".ui-dialog").css({"width":"1000px","padding":"100px"});
     });
-});*/
+});
 
