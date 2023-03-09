@@ -108,7 +108,7 @@ jQuery.fn.highlight = function (words, options) {
 
 $(document).ready(function(){
     $("#search_input").click(function(){
-        $("#search_input").dialog();
+        $("#search_input").dialog('open');
     });
 });
 
