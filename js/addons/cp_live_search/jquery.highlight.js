@@ -109,12 +109,15 @@ jQuery.fn.highlight = function (words, options) {
 $(document).ready(function(){
     $("#search_input").click(function(){
         $(".ty-search-block").dialog({
-            height: 50,
-            width: 350,
-            modal: true,
-            resizable: true,
-            dialogClass: 'no-close success-dialog'
-        });
+                     minWidth: 400,
+                     minHeight: 'auto',
+                     autoOpen: false,
+                     dialogClass: 'custom-ui-widget-header-warning',
+                     position: {
+                       my: 'center',
+                       at: 'left'
+                     }
+                });
     });
 });
 
