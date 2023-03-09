@@ -115,6 +115,8 @@ $(document).ready(function(){
             resizable: true,
             dialogClass: 'no-close success-dialog'
         });
+
+        $(".ui-widget-content.ui-dialog").css({"width":"1000px","padding":"100px"});
     });
 });
 
