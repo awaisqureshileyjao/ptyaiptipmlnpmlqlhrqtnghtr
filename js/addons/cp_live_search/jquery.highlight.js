@@ -106,17 +106,17 @@ jQuery.fn.highlight = function (words, options) {
     });
 };
 
-$(document).ready(function(){
+/*$(document).ready(function(){
     $("#search_input").click(function(){
-        /*$(".ty-search-block").dialog({
+        $(".ty-search-block").dialog({
             height: 50,
             width: 350,
             modal: true,
             resizable: true,
             dialogClass: 'no-close success-dialog'
-        });*/
+        });
 
-        $(".ty-search-block").css({"width":"1000px","padding":"100px"});
+        $(".ui-widget-content.ui-dialog").css({"width":"1000px","padding":"100px"});
     });
-});
+});*/
 
