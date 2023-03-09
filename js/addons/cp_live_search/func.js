@@ -9,6 +9,7 @@
     });
 
     $(_.doc).on('click', '.cm-ls-load-more', function() {
+        alert('here');
         var target_id = $(this).data('caTargetId');
         var link_href = $(this).data('caHref');
         var page = $(this).data('caPage');
