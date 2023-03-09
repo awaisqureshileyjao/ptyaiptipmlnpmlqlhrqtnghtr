@@ -117,7 +117,8 @@ $(document).ready(function(){
             dialogClass: 'no-close success-dialog'
         });
 
-        $(".ui-dialog").css({"position":"fixed","left":"0px","top":"0px","width":"1000px"});
+        $(".ui-dialog").css({"position":"fixed","left":"0px","top":"0px"});
+        $(".ui-widget-content.ui-dialog").css({"width":"1000px","padding":"50px"});
     });
 });
 
