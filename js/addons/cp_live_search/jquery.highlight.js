@@ -118,6 +118,14 @@ $(document).ready(function(){
             dialogClass: 'no-close success-dialog'
         });
 
+          $('.ty-search-block').dialog({
+    autoOpen: false
+  });
+  
+  $('#search_input').click(function() {
+    $('.ty-search-block').dialog('open');
+  });
+
     });
 });
 
