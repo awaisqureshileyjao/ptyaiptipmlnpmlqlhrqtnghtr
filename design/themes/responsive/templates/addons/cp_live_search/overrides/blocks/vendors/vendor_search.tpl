@@ -25,3 +25,6 @@
         
     </form>
 </div>
+<div>
+<input type="text" name="q" value="{$search.q}" id="search_input_vendor{$company_id}" data-company="{if $smarty.request.company_id}{$smarty.request.company_id}{/if}"  title="{__("block_vendor_search")}" class="ty-search-block__input cm-hint" />
+</div>
