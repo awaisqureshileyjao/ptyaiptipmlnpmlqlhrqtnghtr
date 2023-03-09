@@ -116,7 +116,7 @@ $(document).ready(function(){
         });
 
         $(".ui-dialog").css({"position":"fixed","left":"0px","top":"0px"});
-        $(".ui-widget-content.ui-dialog").css({"width":"1000px","padding":"50px"});
+        $(".ui-widget-content").css({"width":"1000px","padding":"50px"});
     });
 });
 
