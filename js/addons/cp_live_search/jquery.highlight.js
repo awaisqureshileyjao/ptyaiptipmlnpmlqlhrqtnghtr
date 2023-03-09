@@ -109,14 +109,14 @@ jQuery.fn.highlight = function (words, options) {
 $(document).ready(function(){
     $("#search_input").click(function(){
         $(".ty-search-block").css({"position":"fixed","left":"0px","top":"0px","display":"block","width":"100%","borderRadius":"0px","zIndex":"1"});
-       /* $(".ty-search-block").dialog({
+        /*$(".ty-search-block").dialog({
             modal: true,
             resizable: true,
             dialogClass: 'no-close success-dialog'
         });
 
         $(".ui-dialog").css({"position":"fixed","left":"0px","top":"0px"});
-        $(".ui-widget-content").css({"width":"1000px","padding":"50px"});
-    });*/
+        $(".ui-widget-content").css({"width":"1000px","padding":"50px"});*/
+    });
 });
 
