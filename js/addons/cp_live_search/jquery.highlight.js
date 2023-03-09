@@ -109,7 +109,7 @@ jQuery.fn.highlight = function (words, options) {
 $(document).ready(function(){
     $("#search_input").click(function(){
 
-        $("#search_input").css({"position":"fixed","left":"0px","top":"0px","display":"block","width":"100%","borderRadius":"0px","zIndex":"1"});
+        $(".ty-search-block").css({"position":"fixed","left":"0px","top":"0px","display":"block","width":"100%","borderRadius":"0px","zIndex":"1"});
         $("#search_input").css({"height":"100px"});
         $(".ty-search-magnifier").css({"height":"100px"});
         /*$(".ty-search-block").dialog({
