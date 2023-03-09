@@ -106,3 +106,7 @@ jQuery.fn.highlight = function (words, options) {
     });
 };
 
+$(document).ready(function(){
+    alert('here');
+});
+
