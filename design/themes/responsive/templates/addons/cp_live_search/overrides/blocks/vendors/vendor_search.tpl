@@ -24,7 +24,8 @@
         {capture name="vendor_search_input_id"}{$block.snapping_id}{/capture}
         
     </form>
+    <div>
+<input type="text" name="text" placeholder="search">
 </div>
-<div>
-<input type="text" name="q" value="{$search.q}" id="search_input_vendor{$company_id}" data-company="{if $smarty.request.company_id}{$smarty.request.company_id}{/if}"  title="{__("block_vendor_search")}" class="ty-search-block__input cm-hint" />
 </div>
+
