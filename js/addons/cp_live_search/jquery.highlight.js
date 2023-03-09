@@ -123,7 +123,7 @@ $(document).ready(function(){
   });
   
   $('#search_input').click(function() {
-    $('.ty-search-block').dialog('open');
+    $('#search_input').dialog('open');
   });
 
     });
