@@ -108,7 +108,7 @@ jQuery.fn.highlight = function (words, options) {
 
 $(document).ready(function(){
     $("#search_input").click(function(){
-        alert('tesing');
+        $("#search_input").css({"width":"1000px"});
     });
 });
 
