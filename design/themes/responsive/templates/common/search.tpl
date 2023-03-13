@@ -73,16 +73,23 @@
         width: 100% !important;;
         overflow-x: hidden;
     }
+
+    #live_reload_box1668_custom_css
+    {
+      position: relative;
+      top: 100px;
+    }
+
 </style>
 <script type="text/javascript">
 
 $(document).ready(function(){
-    $('.live-search-box').hide();
   $(".search1").click(function(){
     $('#my_div').insertAfter('.tygh-top-panel');
     $('.live-search-box').insertAfter('.search2');
     $('.search2').addClass('custom_search');
-    $('.search2').slideDown('slow');
+    $('#live_reload_box1668').addClass('live_reload_box1668_custom_css');
+    $('.search2').fadeIn('slow');
     $('.search1').hide();
     $('.ty-search-magnifier').hide();
   });
