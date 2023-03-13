@@ -81,7 +81,7 @@
     }
     .search2::after 
     {
-      content: "close";
+      content: "+";
       float: right;
       color: red;
     }
