@@ -63,9 +63,26 @@
 </div>
 
 {literal}
+<style type="text/css">
+    .custom_search
+    {
+        height: 100px;
+        z-index: 100;
+        border-radius: 0px;
+        border:none;
+        width: 100%;
+        overflow-x: hidden;
+    }
+</style>
 <script type="text/javascript">
-    $(document).ready(function(){
-        $('#my_div').insertAfter('.tygh-top-panel');
-    });
+
+$(document).ready(function(){
+  $("#search_input").click(function(){
+    $('#my_div').insertAfter('.tygh-top-panel');
+    $("#search_input").addClass('custom_search');
+  });
+});
+
+
 </script>
 {/literal}
