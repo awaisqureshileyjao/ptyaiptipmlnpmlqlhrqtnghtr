@@ -79,13 +79,6 @@
       position: relative !important;;
       top: 100px !important;
     }
-    .search2::after 
-    {
-      content: "+" !important;
-      color: red !important;
-      font-size: 100px !important;
-      z-index: 110 !important;
-    }
 
 </style>
 <script type="text/javascript">
