@@ -88,7 +88,7 @@ $(document).ready(function(){
     $('#my_div').insertAfter('.tygh-top-panel');
     $('.live-search-box').insertAfter('.search2');
     $('.search2').addClass('custom_search');
-    $('#live_reload_box1668').addClass('live_reload_box1668_custom_css');
+    $('.live-search-box').addClass('live_reload_box1668_custom_css');
     $('.search2').slideDown();
     $('.search1').hide();
     $('.ty-search-magnifier').hide();
