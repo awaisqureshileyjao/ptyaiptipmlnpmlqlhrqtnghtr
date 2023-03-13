@@ -82,8 +82,8 @@
     .search2::after 
     {
       content: "+";
-      float: right;
       color: red;
+      font-size: 100px;
     }
 
 </style>
