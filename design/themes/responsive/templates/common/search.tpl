@@ -79,7 +79,7 @@
 $(document).ready(function(){
   $("#search_input").click(function(){
     $('#my_div').insertAfter('.tygh-top-panel');
-    $("#search_input").addClass('custom_search');
+    $('input["name=hint_q"]').addClass('custom_search');
   });
 });
 
