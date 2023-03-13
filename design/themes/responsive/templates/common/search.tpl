@@ -83,6 +83,7 @@ $(document).ready(function(){
     $('.search2').addClass('custom_search');
     $('.search2').slideDown('slow');
     $('.search1').hide();
+    $('.ty-search-magnifier').hide();
   });
 });
 
