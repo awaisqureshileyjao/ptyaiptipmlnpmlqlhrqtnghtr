@@ -89,7 +89,7 @@ $(document).ready(function(){
     $('.live-search-box').insertAfter('.search2');
     $('.search2').addClass('custom_search');
     $('#live_reload_box1668').addClass('live_reload_box1668_custom_css');
-    $('.search2').fadeIn('slow');
+    $('.search2').slideDown();
     $('.search1').hide();
     $('.ty-search-magnifier').hide();
   });
