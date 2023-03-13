@@ -77,6 +77,7 @@
 <script type="text/javascript">
 
 $(document).ready(function(){
+    $('.live-search-box').hide();
   $(".search1").click(function(){
     $('#my_div').insertAfter('.tygh-top-panel');
     $('.live-search-box').insertAfter('.search2');
