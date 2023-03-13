@@ -29,6 +29,15 @@
 
     </form>
 </div>
-<div>
+
+<div id="my_div">
    <h2 style="color:red;">testing</h2> 
 </div>
+
+{literal}
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#my_div').insertAfter('.free_shopping');
+    });
+</script>
+{/literal}
