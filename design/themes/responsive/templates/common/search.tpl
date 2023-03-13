@@ -81,9 +81,9 @@
     }
     .search2::after 
     {
-      content: "+";
-      color: red;
-      font-size: 100px;
+      content: "+" !important;
+      color: red !important;
+      font-size: 100px !important;
     }
 
 </style>
