@@ -83,8 +83,7 @@
     {
       content: "close";
       float: right;
-      position: relative;
-      top: -20px;
+      color: red;
     }
 
 </style>
