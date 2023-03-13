@@ -74,7 +74,7 @@
         overflow-x: hidden;
     }
 
-    .live_reload_box1668_custom_css
+    .custom_live_reload_box
     {
       position: relative !important;;
       top: 100px !important;
@@ -88,7 +88,7 @@ $(document).ready(function(){
     $('#my_div').insertAfter('.tygh-top-panel');
     $('.live-search-box').insertAfter('.search2');
     $('.search2').addClass('custom_search');
-    $('.live-search-box').addClass('live_reload_box1668_custom_css');
+    $('.live-search-box').addClass('custom_live_reload_box');
     $('.search2').slideDown();
     $('.search1').hide();
     $('.ty-search-magnifier').hide();
