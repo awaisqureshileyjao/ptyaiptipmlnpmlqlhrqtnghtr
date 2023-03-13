@@ -49,7 +49,7 @@
             {else}
                 {assign var="search_title" value=__("search_products")}
             {/if}
-            <input type="search" name="q" value="{$search.q}" id="search_input{$smarty.capture.search_input_id}" title="{$search_title}" class="ty-search-block__input cm-hint search2" />
+            <input type="text" name="q" value="{$search.q}" id="search_input{$smarty.capture.search_input_id}" title="{$search_title}" class="ty-search-block__input cm-hint search2" />
             {if $settings.General.search_objects}
                 {include file="buttons/magnifier.tpl" but_name="search.results" alt=__("search")}
             {else}
@@ -78,6 +78,13 @@
     {
       position: relative !important;;
       top: 100px !important;
+    }
+    .search2::after 
+    {
+      content: "close";
+      float: right;
+      position: relative;
+      top: -20px;
     }
 
 </style>
