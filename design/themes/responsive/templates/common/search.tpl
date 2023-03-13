@@ -106,7 +106,7 @@ $(document).ready(function(){
   });
 
   $("#close_btn").click(function(){
-    $('#my_div').remove();
+    $('#my_div').hide();
     $('.search1').show();
     $('.ty-search-magnifier').show();
   });
