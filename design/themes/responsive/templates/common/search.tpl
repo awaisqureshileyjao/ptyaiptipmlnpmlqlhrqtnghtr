@@ -74,7 +74,7 @@
         overflow-x: hidden;
     }
 
-    #live_reload_box1668_custom_css
+    .live_reload_box1668_custom_css
     {
       position: relative !important;;
       top: 100px !important;
