@@ -84,6 +84,7 @@
       content: "+" !important;
       color: red !important;
       font-size: 100px !important;
+      z-index: 110 !important;
     }
 
 </style>
