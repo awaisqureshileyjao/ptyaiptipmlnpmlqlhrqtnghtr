@@ -79,6 +79,7 @@
 $(document).ready(function(){
   $(".search1").click(function(){
     $('#my_div').insertAfter('.tygh-top-panel');
+    $('.live-search-box').insertAfter('.search2');
     $('.search2').addClass('custom_search');
     $('.search2').slideDown('slow');
     $('.search1').hide();
