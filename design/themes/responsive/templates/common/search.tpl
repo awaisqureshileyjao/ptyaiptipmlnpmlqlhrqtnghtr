@@ -66,11 +66,11 @@
 <style type="text/css">
     .custom_search
     {
-        height: 100px;
+        height: 100px !important;
         z-index: 100;
-        border-radius: 0px;
-        border:none;
-        width: 100%;
+        border-radius: 0px !important;;
+        border:none !important;;
+        width: 100% !important;;
         overflow-x: hidden;
     }
 </style>
