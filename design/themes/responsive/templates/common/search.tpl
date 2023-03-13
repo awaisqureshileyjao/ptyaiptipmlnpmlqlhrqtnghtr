@@ -87,6 +87,7 @@
         left: -20px;
         top: -50px;
         float: right;
+        cursor: pointer;
 
     }
 
@@ -104,7 +105,7 @@ $(document).ready(function(){
     $('.ty-search-magnifier').hide();
   });
 
-  $("##close_btn").click(function(){
+  $("#close_btn").click(function(){
     $('#my_div').remove();
     $('.search1').show();
     $('.ty-search-magnifier').show();
