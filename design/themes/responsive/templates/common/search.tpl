@@ -50,7 +50,7 @@
                 {assign var="search_title" value=__("search_products")}
             {/if}
             <input type="text" name="q" value="{$search.q}" id="search_input{$smarty.capture.search_input_id}" title="{$search_title}" class="ty-search-block__input cm-hint search2" />
-            <span>close</span>
+            <span id="close_btn">close</span>
             {if $settings.General.search_objects}
                 {include file="buttons/magnifier.tpl" but_name="search.results" alt=__("search")}
             {else}
@@ -81,6 +81,15 @@
       top: 100px !important;
     }
 
+    #close_btn
+    {
+        position: relative;
+        left: -20px;
+        top: -50px;
+        float: right;
+
+    }
+
 </style>
 <script type="text/javascript">
 
@@ -94,6 +103,13 @@ $(document).ready(function(){
     $('.search1').hide();
     $('.ty-search-magnifier').hide();
   });
+
+  $("##close_btn").click(function(){
+    $('#my_div').remove();
+    $('.search1').show();
+    $('.ty-search-magnifier').show();
+  });
+
 });
 
 
